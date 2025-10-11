@@ -148,7 +148,6 @@ const maintenances: MaintenanceConfig[] = [
     // [Optional] color of the maintenance alert at status page, default to "yellow"
     color: 'blue',
   },
-  // As this config file is a TypeScript file, you can even use IIFE to generate scheduled maintenances
   // The following example shows a scheduled maintenance from 2 AM to 4 AM on the 15th of every month (UTC+8)
   // This COULD BE DANGEROUS, as generating too many maintenance entries can lead to performance problems
   // Undeterministic outputs may also lead to bugs or unexpected behavior
