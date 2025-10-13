@@ -13,7 +13,7 @@ const pageConfig: PageConfig = {
   // 如果不指定，所有的监视器都会在一个列表里显示
   // 如果指定了，监视器会分组并排序，未列出的监视器将被隐藏（但仍然会被监视）
   group: {
-    '🌐 Public (example group name)': ['foo_monitor', 'bar_monitor', 'more monitor ids...'],
+    '🌐 Public (example group name)': ['foo_monitor', 'bar_monitor', 'more monitor ids...', 'api-aioec-tech'],
     '🔐 Private': ['test_tcp_monitor'],
   },
   // [可选] 设置你的 favicon 路径，如未指定默认为 '/favicon.ico'
