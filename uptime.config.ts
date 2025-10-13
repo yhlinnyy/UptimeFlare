@@ -6,11 +6,12 @@ const pageConfig: PageConfig = {
   // 显示在状态页标题的链接，可以设置 `highlight` 为 `true`
   links: [
     { link: 'https://github.com/lyc8503', label: 'GitHub' },
+    { link: 'https://blog.lyc8503.net/', label: 'Blog' },
   // [可选] 为你的监视器分组
   // 如果不指定，所有的监视器都会在一个列表里显示
   // 如果指定了，监视器会分组并排序，未列出的监视器将被隐藏（但仍然会被监视）
   group: {
-    '🌐 监控': ['api-aioec-tech'],
+    '🌐 Public': ['api-aioec-tech'],
   },
   // [可选] 设置你的 favicon 路径，如未指定默认为 '/favicon.ico'
   favicon: '/favicon.ico',
@@ -38,6 +39,22 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://api.aioec.tech',
     },
   ],
+  notification: {
+    // [可选] apprise API 服务器 URL
+    // 如果未指定，将不会发送任何通知
+    appriseApiServer: '',
+    // [可选] apprise 的接收者 URL，请参阅 https://github.com/caronc/apprise
+    // 如果未指定，将不会发送任何通知
+    recipientUrl: '',
+    // [可选] 通知消息中使用的时区，默认为 "Etc/GMT"
+    timeZone: 'Asia/Shanghai',
+    // [可选] 发送通知前的宽限期（分钟）
+    // 只有在初始故障后，监视器连续 N 次检查都失败时，才会发送通知
+    // 如果未指定，通知将立即发送
+    gracePeriod: 0,
+    // [可选] 禁用指定 id 的监视器的通知
+    skipNotificationIds: [],
+  },
   callbacks: {
     onStatusChange: async (
       env: any,
