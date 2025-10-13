@@ -7,11 +7,12 @@ const pageConfig: PageConfig = {
   links: [
     { link: 'https://github.com/lyc8503', label: 'GitHub' },
     { link: 'https://blog.lyc8503.net/', label: 'Blog' },
+  ],
   // [可选] 为你的监视器分组
   // 如果不指定，所有的监视器都会在一个列表里显示
   // 如果指定了，监视器会分组并排序，未列出的监视器将被隐藏（但仍然会被监视）
   group: {
-    '🌐 Public': ['api-aioec-tech'],
+    '🌐 Public': ['api-aioec-tech']
   },
   // [可选] 设置你的 favicon 路径，如未指定默认为 '/favicon.ico'
   favicon: '/favicon.ico',
@@ -19,8 +20,8 @@ const pageConfig: PageConfig = {
   maintenances: {
     // [可选] 即将进行的维护警报的颜色，默认为 'gray'
     // 生效的警报将始终使用 MaintenanceConfig 中指定的颜色
-    upcomingColor: 'gray',
-  },
+    upcomingColor: 'gray'
+  }
 }
 
 const workerConfig: WorkerConfig = {
