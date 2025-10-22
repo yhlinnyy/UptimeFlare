@@ -38,7 +38,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://gpt-load-latest-hsc1.onrender.com/',
       tooltip: '监控 gpt-load-latest-hsc1.onrender.com',
       statusPageLink: 'https://gpt-load-latest-hsc1.onrender.com/',
-      timeout: 5000,
+      timeout: 180000,
     },
     {
       id: 'auto-leaflow',
@@ -47,7 +47,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://auto.yhlinny.cloudns.be',
       tooltip: '监控 auto.yhlinny.cloudns.be',
       statusPageLink: 'https://auto.yhlinny.cloudns.be',
-      timeout: 5000,
+      timeout: 180000,
     },
     {
       id: 'api-aioec-tech',
@@ -56,6 +56,7 @@ const workerConfig: WorkerConfig = {
       target: 'https://api.aioec.tech',
       tooltip: '监控 aioec.tech API',
       statusPageLink: 'https://api.aioec.tech',
+      timeout: 10000,
     },
   ],
   notification: {
