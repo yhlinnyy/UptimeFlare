@@ -2,17 +2,17 @@ import { MaintenanceConfig, PageConfig, WorkerConfig } from './types/config'
 
 const pageConfig: PageConfig = {
   // 状态页的标题
-  title: "lyc8503's Status Page",
+  title: "Status Page",
   // 显示在状态页标题的链接，可以设置 `highlight` 为 `true`
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
+    { link: 'https://github.com/yhlinnyy/UptimeFlare', label: 'GitHub' },
     { link: 'https://blog.lyc8503.net/', label: 'Blog' },
   ],
   // [可选] 为你的监视器分组
   // 如果不指定，所有的监视器都会在一个列表里显示
   // 如果指定了，监视器会分组并排序，未列出的监视器将被隐藏（但仍然会被监视）
   group: {
-    '🌐 Public': ['gpt-load-latest', 'api-aioec-tech']
+    '🌐 Public': ['gpt-load-latest', 'api-aioec-tech', 'auto-leaflow']
   },
   // [可选] 设置你的 favicon 路径，如未指定默认为 '/favicon.ico'
   favicon: '/favicon.ico',
@@ -38,6 +38,15 @@ const workerConfig: WorkerConfig = {
       target: 'https://gpt-load-latest-hsc1.onrender.com/',
       tooltip: '监控 gpt-load-latest-hsc1.onrender.com',
       statusPageLink: 'https://gpt-load-latest-hsc1.onrender.com/',
+      timeout: 5000,
+    },
+    {
+      id: 'auto-leaflow',
+      name: 'auto leaflow',
+      method: 'GET',
+      target: 'https://auto.yhlinny.cloudns.be',
+      tooltip: '监控 auto.yhlinny.cloudns.be',
+      statusPageLink: 'https://auto.yhlinny.cloudns.be',
       timeout: 5000,
     },
     {
